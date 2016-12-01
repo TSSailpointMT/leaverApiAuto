@@ -1,0 +1,35 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### Directories ###
+
+# ignore all files in the null/ directory
+null/
+
+# ignore all files in the target/ directory
+target/
+
+# ignore all files in the test-output/ directory
+test-output/

@@ -1,0 +1,1372 @@
+2016-11-25 15:39:41,041 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-25 15:39:41,042 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-25 15:39:41,042 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-25 15:39:41,042 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-25 15:39:41,042 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchInner(Workflower.java:2657)
+	at sailpoint.api.Workflower.launch(Workflower.java:2518)
+	at sailpoint.api.Workflower.launch(Workflower.java:2361)
+	at leaver.models.manual.WorkflowModel.launchExistingWorkflow(WorkflowModel.java:40)
+	at leaver.testcases.removeEntitlementForIdentity.removeEntitlement(removeEntitlementForIdentity.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 66 more
+2016-11-25 15:39:41,044 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-25 15:39:41,044 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-25 15:39:41,046 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-25 15:39:41,048 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-25 15:39:41,049 - Do unicode file recognition:  false
+2016-11-25 15:39:41,049 - FileResourceLoader : adding path '.'
+2016-11-25 15:39:41,049 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-25 15:39:41,059 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-25 15:39:41,061 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-25 15:39:41,062 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-25 15:39:41,063 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-25 15:39:41,063 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-25 15:39:41,086 - Created '20' parsers.
+2016-11-25 15:39:41,092 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-25 15:39:41,092 - Velocimacro : Default library not found.
+2016-11-25 15:39:41,092 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-25 15:39:41,092 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-25 15:39:41,092 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-25 15:39:41,092 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-25 15:54:38,462 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-25 15:54:38,463 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-25 15:54:38,463 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-25 15:54:38,463 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-25 15:54:38,463 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchInner(Workflower.java:2657)
+	at sailpoint.api.Workflower.launch(Workflower.java:2518)
+	at sailpoint.api.Workflower.launch(Workflower.java:2361)
+	at leaver.models.manual.WorkflowModel.launchExistingWorkflow(WorkflowModel.java:40)
+	at leaver.testcases.removeEntitlementForIdentity.removeEntitlement(removeEntitlementForIdentity.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 66 more
+2016-11-25 15:54:38,465 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-25 15:54:38,465 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-25 15:54:38,468 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-25 15:54:38,472 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-25 15:54:38,473 - Do unicode file recognition:  false
+2016-11-25 15:54:38,473 - FileResourceLoader : adding path '.'
+2016-11-25 15:54:38,473 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-25 15:54:38,480 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-25 15:54:38,482 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-25 15:54:38,483 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-25 15:54:38,484 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-25 15:54:38,490 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-25 15:54:38,515 - Created '20' parsers.
+2016-11-25 15:54:38,520 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-25 15:54:38,520 - Velocimacro : Default library not found.
+2016-11-25 15:54:38,520 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-25 15:54:38,520 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-25 15:54:38,520 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-25 15:54:38,520 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-25 16:03:23,298 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-25 16:03:23,298 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-25 16:03:23,299 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-25 16:03:23,299 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-25 16:03:23,299 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchInner(Workflower.java:2657)
+	at sailpoint.api.Workflower.launch(Workflower.java:2518)
+	at sailpoint.api.Workflower.launch(Workflower.java:2361)
+	at leaver.models.manual.WorkflowModel.launchExistingWorkflow(WorkflowModel.java:40)
+	at leaver.testcases.removeEntitlementForIdentity.removeEntitlement(removeEntitlementForIdentity.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 66 more
+2016-11-25 16:03:23,301 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-25 16:03:23,301 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-25 16:03:23,302 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-25 16:03:23,305 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-25 16:03:23,305 - Do unicode file recognition:  false
+2016-11-25 16:03:23,306 - FileResourceLoader : adding path '.'
+2016-11-25 16:03:23,306 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-25 16:03:23,313 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-25 16:03:23,314 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-25 16:03:23,315 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-25 16:03:23,316 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-25 16:03:23,317 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-25 16:03:23,344 - Created '20' parsers.
+2016-11-25 16:03:23,349 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-25 16:03:23,350 - Velocimacro : Default library not found.
+2016-11-25 16:03:23,350 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-25 16:03:23,350 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-25 16:03:23,350 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-25 16:03:23,350 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-25 16:08:46,812 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-25 16:08:46,812 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-25 16:08:46,812 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-25 16:08:46,812 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-25 16:08:46,813 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchInner(Workflower.java:2657)
+	at sailpoint.api.Workflower.launch(Workflower.java:2518)
+	at sailpoint.api.Workflower.launch(Workflower.java:2361)
+	at leaver.models.manual.WorkflowModel.launchExistingWorkflow(WorkflowModel.java:40)
+	at leaver.testcases.removeEntitlementForIdentity.removeEntitlement(removeEntitlementForIdentity.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 66 more
+2016-11-25 16:08:46,814 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-25 16:08:46,814 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-25 16:08:46,816 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-25 16:08:46,818 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-25 16:08:46,819 - Do unicode file recognition:  false
+2016-11-25 16:08:46,819 - FileResourceLoader : adding path '.'
+2016-11-25 16:08:46,819 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-25 16:08:46,820 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-25 16:08:46,821 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-25 16:08:46,822 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-25 16:08:46,823 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-25 16:08:46,824 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-25 16:08:46,852 - Created '20' parsers.
+2016-11-25 16:08:46,857 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-25 16:08:46,857 - Velocimacro : Default library not found.
+2016-11-25 16:08:46,857 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-25 16:08:46,858 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-25 16:08:46,858 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-25 16:08:46,858 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-25 16:27:59,487 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-25 16:27:59,487 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-25 16:27:59,487 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-25 16:27:59,487 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-25 16:27:59,488 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchInner(Workflower.java:2657)
+	at sailpoint.api.Workflower.launch(Workflower.java:2518)
+	at sailpoint.api.Workflower.launch(Workflower.java:2361)
+	at leaver.models.manual.WorkflowModel.launchExistingWorkflow(WorkflowModel.java:40)
+	at leaver.testcases.removeEntitlementForIdentity.removeEntitlement(removeEntitlementForIdentity.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 66 more
+2016-11-25 16:27:59,490 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-25 16:27:59,490 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-25 16:27:59,491 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-25 16:27:59,494 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-25 16:27:59,494 - Do unicode file recognition:  false
+2016-11-25 16:27:59,495 - FileResourceLoader : adding path '.'
+2016-11-25 16:27:59,495 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-25 16:27:59,500 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-25 16:27:59,502 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-25 16:27:59,503 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-25 16:27:59,504 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-25 16:27:59,504 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-25 16:27:59,601 - Created '20' parsers.
+2016-11-25 16:27:59,627 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-25 16:27:59,627 - Velocimacro : Default library not found.
+2016-11-25 16:27:59,627 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-25 16:27:59,627 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-25 16:27:59,628 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-25 16:27:59,628 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-30 09:39:50,244 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-30 09:39:50,255 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-30 09:39:50,255 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-30 09:39:50,255 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-30 09:39:50,256 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.advanceSubcase(Workflower.java:5252)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4867)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.assimilate(Workflower.java:4034)
+	at sailpoint.api.Workflower.handleWorkItem(Workflower.java:7551)
+	at sailpoint.api.Workflower.process(Workflower.java:1741)
+	at leaver.models.manual.IdentityRequestModel.approveRequest(IdentityRequestModel.java:57)
+	at leaver.testcases.deleteAnIdentity.deleteIdentity(deleteAnIdentity.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 63 more
+2016-11-30 09:39:50,258 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 09:39:50,258 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 09:39:50,259 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-30 09:39:50,262 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-30 09:39:50,275 - Do unicode file recognition:  false
+2016-11-30 09:39:50,275 - FileResourceLoader : adding path '.'
+2016-11-30 09:39:50,276 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-30 09:39:50,277 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-30 09:39:50,278 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-30 09:39:50,279 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-30 09:39:50,280 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-30 09:39:50,281 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-30 09:39:50,497 - Created '20' parsers.
+2016-11-30 09:39:50,503 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-30 09:39:50,504 - Velocimacro : Default library not found.
+2016-11-30 09:39:50,504 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-30 09:39:50,504 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-30 09:39:50,504 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-30 09:39:50,504 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-30 10:05:49,469 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-30 10:05:49,479 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-30 10:05:49,479 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-30 10:05:49,479 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-30 10:05:49,480 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchInner(Workflower.java:2657)
+	at sailpoint.api.Workflower.launch(Workflower.java:2518)
+	at sailpoint.api.Workflower.launch(Workflower.java:2361)
+	at leaver.models.manual.WorkflowModel.launchExistingWorkflow(WorkflowModel.java:40)
+	at leaver.testcases.deleteAnIdentity.deleteIdentity(deleteAnIdentity.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 66 more
+2016-11-30 10:05:49,481 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 10:05:49,481 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 10:05:49,483 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-30 10:05:49,486 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-30 10:05:49,486 - Do unicode file recognition:  false
+2016-11-30 10:05:49,486 - FileResourceLoader : adding path '.'
+2016-11-30 10:05:49,487 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-30 10:05:49,488 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-30 10:05:49,497 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-30 10:05:49,499 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-30 10:05:49,500 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-30 10:05:49,500 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-30 10:05:49,531 - Created '20' parsers.
+2016-11-30 10:05:49,537 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-30 10:05:49,537 - Velocimacro : Default library not found.
+2016-11-30 10:05:49,537 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-30 10:05:49,537 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-30 10:05:49,537 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-30 10:05:49,537 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-30 10:08:19,175 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-30 10:08:19,175 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-30 10:08:19,175 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-30 10:08:19,175 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-30 10:08:19,176 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchInner(Workflower.java:2657)
+	at sailpoint.api.Workflower.launch(Workflower.java:2518)
+	at sailpoint.api.Workflower.launch(Workflower.java:2361)
+	at leaver.models.manual.WorkflowModel.launchExistingWorkflow(WorkflowModel.java:40)
+	at leaver.testcases.deleteAnIdentity.deleteIdentity(deleteAnIdentity.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 66 more
+2016-11-30 10:08:19,178 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 10:08:19,178 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 10:08:19,180 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-30 10:08:19,182 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-30 10:08:19,183 - Do unicode file recognition:  false
+2016-11-30 10:08:19,183 - FileResourceLoader : adding path '.'
+2016-11-30 10:08:19,183 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-30 10:08:19,184 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-30 10:08:19,186 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-30 10:08:19,187 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-30 10:08:19,188 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-30 10:08:19,188 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-30 10:08:19,209 - Created '20' parsers.
+2016-11-30 10:08:19,214 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-30 10:08:19,215 - Velocimacro : Default library not found.
+2016-11-30 10:08:19,215 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-30 10:08:19,215 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-30 10:08:19,215 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-30 10:08:19,215 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-30 10:22:00,867 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-30 10:22:00,867 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-30 10:22:00,867 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-30 10:22:00,868 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-30 10:22:00,868 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchInner(Workflower.java:2657)
+	at sailpoint.api.Workflower.launch(Workflower.java:2518)
+	at sailpoint.api.Workflower.launch(Workflower.java:2361)
+	at leaver.models.manual.WorkflowModel.launchExistingWorkflow(WorkflowModel.java:40)
+	at leaver.testcases.deleteAnIdentity.deleteIdentity(deleteAnIdentity.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 66 more
+2016-11-30 10:22:00,870 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 10:22:00,870 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 10:22:00,871 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-30 10:22:00,874 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-30 10:22:00,875 - Do unicode file recognition:  false
+2016-11-30 10:22:00,875 - FileResourceLoader : adding path '.'
+2016-11-30 10:22:00,875 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-30 10:22:00,886 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-30 10:22:00,887 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-30 10:22:00,888 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-30 10:22:00,889 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-30 10:22:00,889 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-30 10:22:00,911 - Created '20' parsers.
+2016-11-30 10:22:00,916 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-30 10:22:00,917 - Velocimacro : Default library not found.
+2016-11-30 10:22:00,917 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-30 10:22:00,917 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-30 10:22:00,917 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-30 10:22:00,917 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-30 10:26:47,445 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-30 10:26:47,445 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-30 10:26:47,445 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-30 10:26:47,445 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-30 10:26:47,446 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchInner(Workflower.java:2657)
+	at sailpoint.api.Workflower.launch(Workflower.java:2518)
+	at sailpoint.api.Workflower.launch(Workflower.java:2361)
+	at leaver.models.manual.WorkflowModel.launchExistingWorkflow(WorkflowModel.java:40)
+	at leaver.testcases.deleteAnIdentity.deleteIdentity(deleteAnIdentity.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 66 more
+2016-11-30 10:26:47,448 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 10:26:47,448 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 10:26:47,450 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-30 10:26:47,452 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-30 10:26:47,453 - Do unicode file recognition:  false
+2016-11-30 10:26:47,453 - FileResourceLoader : adding path '.'
+2016-11-30 10:26:47,453 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-30 10:26:47,460 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-30 10:26:47,461 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-30 10:26:47,462 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-30 10:26:47,463 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-30 10:26:47,463 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-30 10:26:47,493 - Created '20' parsers.
+2016-11-30 10:26:47,498 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-30 10:26:47,499 - Velocimacro : Default library not found.
+2016-11-30 10:26:47,499 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-30 10:26:47,499 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-30 10:26:47,499 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-30 10:26:47,499 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-30 10:30:10,042 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-30 10:30:10,042 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-30 10:30:10,042 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-30 10:30:10,042 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-30 10:30:10,043 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchInner(Workflower.java:2657)
+	at sailpoint.api.Workflower.launch(Workflower.java:2518)
+	at sailpoint.api.Workflower.launch(Workflower.java:2361)
+	at leaver.models.manual.WorkflowModel.launchExistingWorkflow(WorkflowModel.java:40)
+	at leaver.testcases.deleteAnIdentity.deleteIdentity(deleteAnIdentity.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 66 more
+2016-11-30 10:30:10,044 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 10:30:10,044 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 10:30:10,046 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-30 10:30:10,048 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-30 10:30:10,049 - Do unicode file recognition:  false
+2016-11-30 10:30:10,049 - FileResourceLoader : adding path '.'
+2016-11-30 10:30:10,049 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-30 10:30:10,050 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-30 10:30:10,052 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-30 10:30:10,053 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-30 10:30:10,054 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-30 10:30:10,055 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-30 10:30:10,081 - Created '20' parsers.
+2016-11-30 10:30:10,086 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-30 10:30:10,087 - Velocimacro : Default library not found.
+2016-11-30 10:30:10,087 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-30 10:30:10,087 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-30 10:30:10,087 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-30 10:30:10,087 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-30 10:39:27,241 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-30 10:39:27,242 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-30 10:39:27,242 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-30 10:39:27,242 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-30 10:39:27,242 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchInner(Workflower.java:2657)
+	at sailpoint.api.Workflower.launch(Workflower.java:2518)
+	at sailpoint.api.Workflower.launch(Workflower.java:2361)
+	at leaver.models.manual.WorkflowModel.launchExistingWorkflow(WorkflowModel.java:40)
+	at leaver.testcases.deleteAnIdentity.deleteIdentity(deleteAnIdentity.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 66 more
+2016-11-30 10:39:27,244 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 10:39:27,244 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 10:39:27,245 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-30 10:39:27,248 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-30 10:39:27,248 - Do unicode file recognition:  false
+2016-11-30 10:39:27,249 - FileResourceLoader : adding path '.'
+2016-11-30 10:39:27,249 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-30 10:39:27,250 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-30 10:39:27,251 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-30 10:39:27,252 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-30 10:39:27,253 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-30 10:39:27,253 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-30 10:39:27,274 - Created '20' parsers.
+2016-11-30 10:39:27,280 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-30 10:39:27,280 - Velocimacro : Default library not found.
+2016-11-30 10:39:27,280 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-30 10:39:27,280 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-30 10:39:27,280 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-30 10:39:27,280 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-30 11:15:45,943 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-30 11:15:45,943 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-30 11:15:45,943 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-30 11:15:45,943 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-30 11:15:45,945 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.advanceSubcase(Workflower.java:5252)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4867)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.assimilate(Workflower.java:4034)
+	at sailpoint.api.Workflower.handleWorkItem(Workflower.java:7551)
+	at sailpoint.api.Workflower.process(Workflower.java:1741)
+	at leaver.models.manual.IdentityRequestModel.approveRequest(IdentityRequestModel.java:57)
+	at leaver.testcases.deleteAnIdentity.deleteIdentity(deleteAnIdentity.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 63 more
+2016-11-30 11:15:45,947 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 11:15:45,947 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-11-30 11:15:45,948 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-11-30 11:15:45,951 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-11-30 11:15:45,952 - Do unicode file recognition:  false
+2016-11-30 11:15:45,952 - FileResourceLoader : adding path '.'
+2016-11-30 11:15:45,952 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-11-30 11:15:45,962 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-11-30 11:15:45,963 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-11-30 11:15:45,964 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-11-30 11:15:45,965 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-11-30 11:15:45,966 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-11-30 11:15:45,987 - Created '20' parsers.
+2016-11-30 11:15:45,993 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-11-30 11:15:45,993 - Velocimacro : Default library not found.
+2016-11-30 11:15:45,993 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-11-30 11:15:45,993 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-11-30 11:15:45,993 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-11-30 11:15:45,993 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-11-30 11:22:29,321 - Log4JLogChute initialized using file 'velocity.log'
+2016-11-30 11:22:29,321 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-11-30 11:22:29,321 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-11-30 11:22:29,321 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-11-30 11:22:29,322 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at sailpoint.tools.VelocityUtil.init(VelocityUtil.java:52)
+	at sailpoint.tools.VelocityUtil.render(VelocityUtil.java:67)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:44)
+	at sailpoint.tools.MessageRenderer.render(MessageRenderer.java:61)
+	at sailpoint.object.EmailTemplate.compile(EmailTemplate.java:263)
+	at sailpoint.server.InternalContext.sendEmailNotification(InternalContext.java:931)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:909)
+	at sailpoint.workflow.StandardWorkflowHandler.sendEmail(StandardWorkflowHandler.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sailpoint.api.Workflower.doCall(Workflower.java:5835)
+	at sailpoint.api.Workflower.evalSource(Workflower.java:5699)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4941)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.startCase(Workflower.java:2988)
+	at sailpoint.api.Workflower.launchSubcase(Workflower.java:5228)
+	at sailpoint.api.Workflower.launchSubcases(Workflower.java:5136)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4929)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.advanceSubcase(Workflower.java:5252)
+	at sailpoint.api.Workflower.advanceStep(Workflower.java:4867)
+	at sailpoint.api.Workflower.advance(Workflower.java:4374)
+	at sailpoint.api.Workflower.assimilate(Workflower.java:4034)
+	at sailpoint.api.Workflower.handleWorkItem(Workflower.java:7551)
+	at sailpoint.api.Workflower.process(Workflower.java:1741)
+	at leaver.models.manual.IdentityRequestModel.approveRequest(IdentityRequestModel.java:57)
+	at leaver.testcases.deleteAnIdentity.deleteIdentity(deleteAnIdentity.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 63 more
