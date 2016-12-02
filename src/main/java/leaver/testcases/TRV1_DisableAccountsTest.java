@@ -88,15 +88,19 @@ private String workflowName;
 		//Verifying that the changes were made
 		Identity whendersonIdentity = context.getObjectByName(Identity.class, "whenderson");
 		List<Link> links = whendersonIdentity.getLinks();
-		
+		boolean allAccountAreDisable = true;
 		for(Link link : links){
-			if (link.getAttributes().get("IIQDisabled").equals(true)){
-					Assert.assertTrue(false);
-					break;
-				}
-			else{
-					Assert.assertTrue(true);
-			}	
+			if (link.getAttributes().get("IIQDisabled").equals(false)){
+				allAccountAreDisable = false;
+				break;
+			}
+				
+		}
+		if (allAccountAreDisable = true){
+			Assert.assertTrue(true);
+		}
+		else{
+			Assert.assertTrue(false);
 		}
 	}
 }
