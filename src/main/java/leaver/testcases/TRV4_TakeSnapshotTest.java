@@ -58,7 +58,7 @@ public class TRV4_TakeSnapshotTest extends Initializer{
         qo.addFilter(f);
         Iterator it = context.search(IdentitySnapshot.class, qo); //you can change the class in order to get other objects
        
-        // iteration on the snapshot for the specific identity
+        // iteration on the snapshot for the specific Identity
         if (!it.hasNext())
         {
         	// there is no snapshots 
