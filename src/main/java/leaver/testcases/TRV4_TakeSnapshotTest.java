@@ -53,12 +53,12 @@ public class TRV4_TakeSnapshotTest extends Initializer{
         qo.setOrderBy("created");
         qo.setOrderAscending(false);
        
-        // filtering for the identity
+        // filtering for the Identity
         Filter f = Filter.eq("identityName", "Ann Parson");
         qo.addFilter(f);
         Iterator it = context.search(IdentitySnapshot.class, qo); //you can change the class in order to get other objects
        
-        // iteration on the snapshot for the specific identity
+        // iteration on the snapshot for the specific Identity
         if (!it.hasNext())
         {
         	// there is no snapshots 
