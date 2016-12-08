@@ -52,7 +52,7 @@ import java.util.Iterator;
 
 
 @Test
-public class TRV1_DisableAccountsTest extends Initializer {
+public class TVR1_DisableAccountsTest extends Initializer {
 	
 private String workflowName;
 	

@@ -23,7 +23,7 @@ import sailpoint.object.IdentitySnapshot;
 import sailpoint.object.QueryOptions;
 import java.util.Iterator;
 
-public class TRV4_TakeSnapshotTest extends Initializer{
+public class TVR4_TakeSnapshotTest extends Initializer{
 	private String workflowName;
 
 	@Parameters({ "workflowName" })

@@ -42,7 +42,7 @@ import sailpoint.object.IdentitySnapshot;
 import sailpoint.object.QueryOptions;
 import java.util.Iterator;
 
-public class TRV3_RemoveEntitlementForIdentityTest extends Initializer{
+public class TVR3_RemoveEntitlementForIdentityTest extends Initializer{
 	private String workflowName;
 
 	@Parameters({ "workflowName" })
