@@ -62,36 +62,41 @@ public class TVR3_RemoveEntitlementForIdentityTest extends Initializer{
 	
 	@Test
 	public void removeEntitlement() throws GeneralException, InterruptedException{
-		//Setting up the variables for this case...
+		// new QO to go through the entitlements 
+        QueryOptions qo = new QueryOptions();
+        qo.setOrderBy("created");
+        qo.setOrderAscending(false);
+        Filter f = Filter.eq("displayName", "Bruce Yum");
+        qo.addFilter(f);
+        
+        // Get the entitlements as a list 
+        List<IdentityEntitlement> listEntitlementsBefore= context.getObjects(IdentityEntitlement.class, qo);
+        
+        // if the list is empty there is no need to run the deletion
+        if (listEntitlementsBefore.isEmpty()){
+       		Assert.assertTrue(true);
+       	} // if the list is not empty, do the delete_entitlements
+       	
+   		//Setting up the variables for this case...
 		HashMap<String,Object> launchVariables = new HashMap<String,Object>();
 		
 		// here we will give the data related to the Identity we will delete the Entitlements from
 		launchVariables.put(ProjectVariable.DELETE_ENTITLEMENTS.getName(), true);
 		//launchVariables.put(ProjectVariable., "AcctsPayableAccess");
-		launchVariables.put(ProjectVariable.IDENTITY_NAME.getName(), "Bob Fields");
+		launchVariables.put(ProjectVariable.IDENTITY_NAME.getName(), "Bruce Yum");
 		
 		//configuring and launching the workflow
 		WorkflowModel workflowModel = new WorkflowModel(context);
 		WorkflowLaunch launch = workflowModel.launchExistingWorkflow(workflowName, "System", Constant.PROJECT_VARS, launchVariables, null);
 		
-		
-		// new QO to go through the entitlements 
-        QueryOptions qo = new QueryOptions();
-        qo.setOrderBy("created");
-        qo.setOrderAscending(false);
-        Filter f = Filter.eq("displayName", "Bob Fields");
-        qo.addFilter(f);
-		
-      //Verifying that the changes were made
-        List<IdentityEntitlement> listEntitlements= context.getObjects(IdentityEntitlement.class, qo);
-		
-        if (listEntitlements.isEmpty()){
+        //Verifying that the changes were made
+        List<IdentityEntitlement> listEntitlementsAfter= context.getObjects(IdentityEntitlement.class, qo);
+        if (listEntitlementsAfter.isEmpty()){
        		Assert.assertTrue(true);
-       	}
-       	else{
+       	} 
+        else{
        		Assert.assertTrue(false);
        	}
-		
 	}
 
 }

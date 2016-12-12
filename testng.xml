@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test name="Test">
+<suite name="Leaver API Auto" parallel="tests">
+  <test name="LeaverAutoTest" preserve-order="true">
     <classes>
-      <class name="leaver.testcases.TRV4_TakeSnapshotTest"/>
+      <class name="leaver.testcases.TVR11_ResetPasswordForIdentityTest"/>
+      <class name="leaver.testcases.TVR1_DisableAccountsTest"/>
+      <class name="leaver.testcases.TVR3_RemoveEntitlementForIdentityTest"/>
+      <class name="leaver.testcases.TVR4_TakeSnapshotTest"/>
+      <class name="leaver.testcases.TVR7_DeleteIdentityAccountsTest"/>
+      <class name="leaver.testcases.TVR9_CreateManualWorkItemTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
